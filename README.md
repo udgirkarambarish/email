@@ -1,12 +1,46 @@
 # 📧 Intelligent Email Classification System
 
-A deep learning-powered email classification system that intelligently categorizes emails into **Spam**, **Promotions**, **Social**, and **Updates** using a **CNN-BiLSTM hybrid model**, with real-time inference via a **Flask API**.
+An end-to-end **CNN‑BiLSTM deep learning system** that automatically categorizes Gmail messages into **Spam**, **Promotions**, **Social**, and **Updates** — complete with real‑time REST API deployment via **Flask**.
 
 ---
 
-## 🚀 Project Overview
+## 🏁 Table of Contents
+- [Motivation & Overview](#motivation--overview)  
+- [Key Features](#key-features)  
+- [Project Structure](#project-structure)  
+- [Model Architecture](#model-architecture)  
+- [Data Collection & Preprocessing](#data-collection--preprocessing)  
+- [Installation & Setup](#installation--setup)  
+- [Training the Model](#training-the-model)  
+- [API Deployment & Usage](#api-deployment--usage)  
+- [Results & Evaluation](#results--evaluation)  
+- [Limitations & Future Work](#limitations--future-work)  
+- [Contributing](#contributing)  
+- [License](#license)  
+- [Acknowledgements & References](#acknowledgements--references)
 
-Inboxes are overloaded, and traditional filters miss critical messages. This project addresses this gap by building an intelligent, adaptable email classification system. It extracts real emails using the Gmail API, preprocesses them (including OCR for image-based text), and uses a hybrid deep learning model to accurately classify them into context-aware categories.
+---
+
+## 😎 Motivation & Overview
+Email overload is a pervasive problem: many users miss important messages amidst noisy clutter.  
+This project addresses that by:
+
+1. Fetching real emails directly via the **Gmail API**  
+2. Applying **OCR** to extract text from images  
+3. Training a hybrid **CNN‑BiLSTM** model for classification  
+4. Deploying via a Flask service for easy integration into apps  
+
+In short: **smart**, **scalable**, and **production‑ready**.
+
+---
+
+## ⚙️ Key Features
+- 📥 Seamless Gmail integration with OAuth2  
+- 🧹 Comprehensive preprocessing: HTML cleaning, lemmatization, punctuation/email/domain handling  
+- 🖼️ OCR support using *EasyOCR* for image-based emails  
+- 🧠 CNN + BiLSTM for capturing both local (n‑grams) and sequential semantics  
+- 💾 Full training pipeline: includes tokenizer, labels, checkpointing  
+- 🚀 Live inference through a RESTful Flask server  
 
 ---
 
@@ -21,3 +55,22 @@ email/
 ├── tokenizer.json           # Trained tokenizer
 ├── label_encoder.pkl        # Trained label encoder
 └── model.keras              # Trained model file
+```
+
+# 1. Clone the repository
+git clone https://github.com/udgirkarambarish/email.git
+cd email
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Set up Gmail API
+# - Go to https://console.cloud.google.com/
+# - Enable Gmail API
+# - Download credentials.json and place in project root
+# - Run data_extraction.py once to generate token.json
+
+python improved-CNN-biLSTM.py
+
+# Start the Flask API
+python api.py
