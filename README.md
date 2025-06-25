@@ -4,20 +4,17 @@ An end-to-end **CNN‑BiLSTM deep learning system** that automatically categoriz
 
 ---
 
-## 🏁 Table of Contents
-- [Motivation & Overview](#motivation--overview)  
-- [Key Features](#key-features)  
+## 🧭 Table of Contents
+
+- [Project Overview](#project-overview)  
+- [Features](#features)  
 - [Project Structure](#project-structure)  
 - [Model Architecture](#model-architecture)  
 - [Data Collection & Preprocessing](#data-collection--preprocessing)  
 - [Installation & Setup](#installation--setup)  
-- [Training the Model](#training-the-model)  
-- [API Deployment & Usage](#api-deployment--usage)  
-- [Results & Evaluation](#results--evaluation)  
-- [Limitations & Future Work](#limitations--future-work)  
-- [Contributing](#contributing)  
-- [License](#license)  
-- [Acknowledgements & References](#acknowledgements--references)
+- [Model Training](#model-training)  
+- [API Usage](#api-usage)  
+- [Results](#results)  
 
 ---
 
