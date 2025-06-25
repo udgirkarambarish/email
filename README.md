@@ -58,19 +58,29 @@ email/
 ```
 
 # 1. Clone the repository
+```bash
 git clone https://github.com/udgirkarambarish/email.git
 cd email
+```
 
 # 2. Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
 # 3. Set up Gmail API
-# - Go to https://console.cloud.google.com/
-# - Enable Gmail API
-# - Download credentials.json and place in project root
-# - Run data_extraction.py once to generate token.json
+ - Go to https://console.cloud.google.com/
+ - Enable Gmail API
+ - Download credentials.json and place in project root
+ - Run data_extraction.py once to generate token.json
 
+# 4. Train model
+```bash
 python improved-CNN-biLSTM.py
+```
 
 # Start the Flask API
+
+```bash
 python api.py
+```
